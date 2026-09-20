@@ -1,16 +1,63 @@
-# React + Vite
+# QueueLess
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Know before you wait.
 
-Currently, two official plugins are available:
+QueueLess is a smart queue estimation web application that helps people make better decisions about when to join a queue.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Instead of joining a long queue without knowing how long it may take, users can enter the number of people currently waiting and get an estimated waiting time based on historical service-time patterns.
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**AWS Amplify:**
+https://production.d3ayqtub8quw40.amplifyapp.com/
 
-## Expanding the Oxlint configuration
+## Problem
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+People regularly lose time waiting in queues at places such as:
+
+* College canteens
+* Administrative offices
+* Clinics
+* Libraries
+* Campus facilities
+
+In many cases, people have no simple way to estimate how long a queue will take before deciding to join it.
+
+## Solution
+
+QueueLess provides a simple waiting-time estimation workflow.
+
+The user selects:
+
+1. College
+2. Campus location
+3. Number of people currently waiting
+
+QueueLess then estimates the waiting time using:
+
+**Estimated wait time = People waiting × Historical average service time**
+
+The application also classifies the queue and provides a recommendation such as whether it may be better to wait or return during a less busy period.
+
+## Features
+
+* Waiting-time estimation
+* Multiple college options
+* Multiple campus locations
+* Queue status classification
+* Personalized wait recommendation
+* Historical queue-pattern insights
+* Best-time-to-visit indication
+* Responsive web interface
+* Live deployment using AWS Amplify Hosting
+
+## Current Data Model
+
+The current MVP uses **sample historical service-time and queue-pattern data** to demonstrate the prediction workflow.
+
+Example service-time values include:
+
+| Location        | Sample historical service time |
+| --------------- | -----------------------------: |
+| College Canteen |                 2.0 min/person |
+| College Office  |                                |
