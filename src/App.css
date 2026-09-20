@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f4ef;
+  color: #111;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+nav {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  border-bottom: 1px solid #ddd;
+  background: #f5f4ef;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.nav-text {
+  font-size: 13px;
+  color: #666;
+}
+
+.hero {
+  padding: 110px 12% 120px;
+  max-width: 1100px;
+}
+
+.badge,
+.section-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #777;
+}
+
+.hero h1 {
+  font-size: clamp(60px, 9vw, 120px);
+  line-height: .88;
+  letter-spacing: -6px;
+  margin: 25px 0;
+}
+
+.hero h1 span {
+  color: #555;
+}
+
+.hero p {
+  max-width: 520px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 17px 25px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.calculator-section,
+.result-section,
+.insights {
+  padding: 90px 12%;
+}
+
+.calculator-section {
+  background: #111;
+  color: white;
+}
+
+.calculator-section .section-label {
+  color: #999;
+}
+
+h2 {
+  font-size: 48px;
+  letter-spacing: -2px;
+  margin: 20px 0 45px;
+}
+
+.calculator {
+  max-width: 800px;
+  display: grid;
+  gap: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 13px;
+  color: #aaa;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 17px;
+  font-size: 16px;
+  border: 1px solid #444;
+  background: #1c1c1c;
+  color: white;
+  border-radius: 3px;
+}
+
+button {
+  padding: 18px;
+  border: none;
+  background: white;
+  color: #111;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.result-section {
+  background: #e9e7df;
+}
+
+.result-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1000px;
+  padding: 50px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.small-title,
+.recommendation p {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #777;
+}
+
+.wait-number {
+  font-size: 90px;
+  font-weight: 800;
+  letter-spacing: -6px;
+  margin: 20px 0;
+}
+
+.wait-number span {
+  font-size: 25px;
+  letter-spacing: 0;
+}
+
+.status {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #111;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.recommendation h3 {
+  font-size: 25px;
+  line-height: 1.35;
+  margin: 20px 0 35px;
+}
+
+.details {
+  border-top: 1px solid #ddd;
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.details span {
+  color: #777;
+}
+
+.insights {
+  background: #f5f4ef;
+}
+
+.subtext {
+  color: #666;
+}
+
+.chart {
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  font-size: 13px;
+}
+
+.bar {
+  height: 16px;
+  background: #ddd;
+}
+
+.bar div {
+  height: 100%;
+  background: #111;
+}
+
+.best-time {
+  max-width: 900px;
+  margin-top: 50px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.best-time span {
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+footer {
+  padding: 40px 12%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  font-size: 13px;
+}
+
+footer span {
+  color: #777;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 80px 7%;
+  }
+
+  .hero h1 {
+    font-size: 65px;
+  }
+
+  .calculator-section,
+  .result-section,
+  .insights {
+    padding: 70px 7%;
+  }
+
+  .result-card {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .wait-number {
+    font-size: 70px;
+  }
+
+  .bar-row {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .bar-row strong {
+    display: none;
+  }
+
+  footer {
+    padding: 30px 7%;
+  }
+}
